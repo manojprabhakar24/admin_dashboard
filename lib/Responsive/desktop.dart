@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../constants.dart';
 
-
 class DesktopScaffold extends StatefulWidget {
   const DesktopScaffold({Key? key}) : super(key: key);
 
@@ -20,10 +19,8 @@ class _DesktopScaffoldState extends State<DesktopScaffold> {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // open drawer
             myDrawer,
-
-            // first half of page
+            SizedBox(width: 10),
             Expanded(
               flex: 2,
               child: Column(
@@ -39,14 +36,41 @@ class _DesktopScaffoldState extends State<DesktopScaffold> {
                       prefixIcon: Icon(Icons.search_rounded),
                     ),
                   ),
-                  Expanded(
-                        child: Container(),
+                  SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Container(
+                            height: 100,
+                            width: 200,
+                            padding: EdgeInsets.all(10),
+                            decoration: BoxDecoration(
+                              border: Border.all(
+                                color: Colors.black,
+                              ),
+                              borderRadius: BorderRadius.circular(10), // Border radius
+                            ),
+                          ),
+                      SizedBox(width: 20),
+                      Container(
+                        height: 100,
+                        width: 200,
+                        padding: EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.black,
+                          ),
+                          borderRadius: BorderRadius.circular(10), // Border radius
+                        ),
+                      ),
+                    ],
+                  ),
+      ]
+                    ),
                   )
-                ],
-              ),
+              ]
             ),
-          ],
-        ),
+
       ),
     );
   }

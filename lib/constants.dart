@@ -4,9 +4,13 @@ var defaultBackgroundColor = Colors.white;
 var appBarColor = Colors.white;
 var myAppBar = AppBar(
   actions: <Widget>[
-    IconButton(
-      icon: Icon(Icons.exit_to_app),
-      onPressed: () {},
+   CircleAvatar(
+     backgroundColor: Colors.brown,
+      radius: 20,
+    ),
+    SizedBox(width: 10,),
+    ElevatedButton.icon(
+      onPressed: () {}, label:Text("LOGOUT") , icon: Icon(Icons.exit_to_app),
     ),
   ],
   iconTheme: const IconThemeData(color: Colors.brown),
