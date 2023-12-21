@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../constants.dart';
-import '../dash.dart';
+
+
 
 class MobileScaffold extends StatefulWidget {
   const MobileScaffold({Key? key}) : super(key: key);
@@ -195,7 +195,7 @@ class _MobileScaffoldState extends State<MobileScaffold> {
                 ],
               ),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 10),
             if (showDashboard)
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

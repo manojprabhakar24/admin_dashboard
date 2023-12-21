@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../constants.dart';
-import '../dash.dart';
+
+
 
 class TabletScaffold extends StatefulWidget {
   const TabletScaffold({Key? key}) : super(key: key);
@@ -196,7 +196,7 @@ class _TabletScaffoldState extends State<TabletScaffold> {
                 ],
               ),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 10),
             if (showDashboard)
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
