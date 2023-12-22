@@ -16,6 +16,7 @@ class _DesktopScaffoldState extends State<DesktopScaffold> {
   bool showDashboard = false;
   bool showHistory = false;
   int selectedStylist = 0;
+  Color dashboardButtonColor = Colors.blue;
 
   @override
   Widget build(BuildContext context) {
@@ -68,12 +69,18 @@ class _DesktopScaffoldState extends State<DesktopScaffold> {
                           onPressed: () {
                             setState(() {
                               showDashboard =
-                                  !showDashboard; // Toggle the visibility of the dashboard
+                                  !showDashboard;
+                              dashboardButtonColor = showDashboard
+                                  ? Colors.green // Change this to the desired color
+                                  : Colors.blue; // Toggle the visibility of the dashboard
                             });
                             // Close the drawer
                           },
                           icon: Icon(Icons.home),
                           label: Text("DASHBOARD"),
+                          style: ElevatedButton.styleFrom(
+                            primary: dashboardButtonColor, // Set button color
+                          ),
                         ),
                       ),
                     ),
